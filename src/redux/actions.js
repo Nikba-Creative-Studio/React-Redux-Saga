@@ -1,6 +1,7 @@
 import { 
     CREATE_POST,
     FETCH_POSTS,
+    REQUEST_POSTS,
     SHOW_LOADER,
     HIDE_LOADER,
     SHOW_ALERT,
@@ -54,6 +55,10 @@ export function hideAlert() {
 
 // fetch posts
 export function fetchPosts() {
+    return {
+        type: REQUEST_POSTS
+    }
+    /*
     return async dispatch => {
 
         try {
@@ -77,8 +82,7 @@ export function fetchPosts() {
             dispatch(showAlert(err.message, 'danger'))
             dispatch(hideLoader())
         }
-
-
     }
+    */
 }
 
