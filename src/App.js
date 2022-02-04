@@ -1,17 +1,23 @@
+import PostForm from './components/PostForm';
+import Posts from './components/Posts';
+import FethedPosts from './components/FethedPosts';
+
 function App() {
   return (
     <div className="container pt-3">
       <div className="row">
         <div className="col">
-          Form
+          <PostForm />
         </div>
       </div>
       <div className="row">
         <div className="col">
-          Posts
+          <h2>Syncrone Posts</h2>
+          <Posts />
         </div>
         <div className="col">
-          Fetched posts
+          <h2>Asyncrone Posts</h2>
+          <FethedPosts posts={[]} />
         </div>
       </div>
 
