@@ -1,6 +1,7 @@
 import { 
     CREATE_POST,
     FETCH_POSTS,
+    DELETE_POST,
 } from './types';
 
 const initialState = {
@@ -20,6 +21,10 @@ export const postsReducer = (state = initialState, action) => {
         case FETCH_POSTS:
             return {
                 ...state, fetchedPosts: action.payload
+            }
+        case DELETE_POST:
+            return {
+                ...state, posts: state.posts.filter(post => post.id !== action.payload)
             }
         default: return state
     }

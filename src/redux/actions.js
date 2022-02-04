@@ -1,6 +1,7 @@
 import { 
     CREATE_POST,
-    FETCH_POSTS,
+    DELETE_POST,
+    //FETCH_POSTS,
     REQUEST_POSTS,
     SHOW_LOADER,
     HIDE_LOADER,
@@ -13,6 +14,14 @@ export function createPost(post) {
     return {
         type: CREATE_POST,
         payload: post
+    }
+}
+
+// delete post item
+export function deletePost(id) {
+    return {
+        type: DELETE_POST,
+        payload: id
     }
 }
 

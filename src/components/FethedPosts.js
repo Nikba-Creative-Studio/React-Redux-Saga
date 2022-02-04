@@ -30,6 +30,6 @@ export default () => {
         )
     }
     return posts.map((post, index) => {
-        return <Post key={post.id} post={post} />
+        return <Post key={post.id} post={post} isFetch />
     })
 } 
