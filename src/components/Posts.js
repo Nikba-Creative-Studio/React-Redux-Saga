@@ -1,13 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Post from './Post';
+import { Alert } from './Alert';
 
 const Posts = ({syncPosts}) => {
     if(syncPosts.length === 0) {
+        const alert = {
+            type: 'warning',
+            text: 'No posts yet'
+        }
         return (
-            <div className="alert alert-danger" role="alert">
-                No posts yet
-            </div>
+            <Alert props={alert} />
         )
     }
     return syncPosts.map((post, index) => {
