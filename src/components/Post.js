@@ -6,7 +6,7 @@ export default ({post, isFetch=false}) => {
     const dispatch = useDispatch();
 
     return (
-        <div className="card mt-3">
+        <div className="card mb-3">
             <div className="card-body">
                 <h5 className="card-title">{post.title}</h5>
                 {!isFetch &&
